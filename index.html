@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101d20"><title>Taller Contrapeso · El último funicular</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<header class="mast"><div class="mast-in">
+  <div class="brand"><span class="crest" aria-hidden="true">⬡</span><span>TALLER <b>CONTRAPESO</b></span></div>
+  <div class="tools"><button id="guide" title="Consultar las fórmulas">▤ <span>Cuaderno</span></button><button id="sound" aria-pressed="false">♪ <span>Sonido off</span></button></div>
+</div></header>
+<main>
+  <div class="station"><div><div class="eyebrow" id="stationNo"></div><h1 id="roomTitle"></h1></div><nav id="route" aria-label="Progreso de la ruta"></nav></div>
+  <section class="game-shell" aria-label="Juego de plataformas">
+    <canvas id="world" width="1024" height="410" tabindex="0" aria-label="Escenario de plataformas. Usa A y D para caminar, espacio para saltar y E para interactuar."></canvas>
+    <div class="objective"><span class="diamond"></span><div><small>OBJETIVO ACTUAL</small><b id="objective"></b></div></div>
+    <span class="corner" id="zone"></span>
+    <button id="context" hidden></button>
+  </section>
+  <div class="controls"><span><kbd>A</kbd><kbd>D</kbd> Mover</span><span><kbd>Espacio</kbd> Saltar</span><span><kbd>E</kbd> Usar guante</span><span><kbd>R</kbd> Reaparecer</span><button id="restart">↻ Reiniciar sala</button></div>
+  <div class="touch"><button data-control="a">◀</button><button data-control="d">▶</button><button data-control=" ">Saltar</button><button data-control="e">Usar</button></div>
+  <section class="dispatch"><div class="radio-icon" aria-hidden="true">◖)))</div><div><small>RADIO DEL TALLER</small><p id="radio" aria-live="polite"></p></div></section>
+</main>
+<dialog id="panel" aria-labelledby="panelTitle">
+  <div class="panelhead"><div><div class="eyebrow" id="panelKicker"></div><h2 id="panelTitle"></h2></div><button class="close" id="close" aria-label="Volver al recorrido">×</button></div>
+  <div id="panelBody"></div>
+</dialog>
+<script src="calculo.js"></script><script src="juego.js"></script><script src="escena.js"></script><script src="maquinas.js"></script>
+</body></html>
